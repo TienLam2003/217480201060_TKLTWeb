@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Họ tên</div>
+    <input type="text" name="HoTen" id="HoTen"> 
+    <div>Năm vào làm</div>
+    <input type="text" name="NamVaoLam" id="NamVaoLam">
+    <div>Hệ số</div>
+    <input type="text" name="HeSo" id="HeSo">
+    <div>Lương cơ sở</div>
+    <input type="text" name="LuongCoSo" id="LuongCoSo" onkeyup="TinhLuong()">
+    <div>Lương cơ bản</div>
+    <input type="text" name="LuongCoBan" id="LuongCoBan">
+    <div>Phụ cấp</div>
+    <input type="text" name="PhuCap" id="PhuCap">
+    <div>Thâm niên</div>
+    <input type="text" name="ThamNien" id="ThamNien">
+    <div>Thành tiền</div>
+    <input type="text" name="ThanhTien" id="ThanhTien">
+    <br>
+    <br>
+    <input type="button" class="btn" value="Tính toán" onclick="TinhLuong()">
+
+    <script>
+        function TinhLuong(){
+            LuongCoBan.value = HeSo.value * LuongCoSo.value;
+            PhuCap.value = 25/100 * LuongCoBan.value;
+            var nam = new Date();
+            var namHienTai = nam.getFullYear();
+            ThamNien.value = namHienTai - NamVaoLam.value
+            ThanhTien.value = LuongCoBan.value + PhuCap.value
+        }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Căn bản</title>
+</head>
+<style>
+    h1{
+        color: red;
+        background-color: aquamarine;
+        font-weight: bolder;
+        text-align: center;
+    }
+    h2{
+        color: blue;
+        background-color: blanchedalmond;
+        text-align: center;
+    }
+    .a{
+        font-size: 30px;
+        background-color:deepskyblue;
+    }
+    .form-control{
+        padding: 6px 8px;
+        border-radius:5px;
+        border: 1px blue solid;
+        display: block; /*Xuống dòng*/
+    }
+    .form-control:focus{
+        background-color: #ccc;
+    }
+    .btn{
+        color: rgb(255, 0, 0); /* Đặt màu chữ */
+        width: 100px; /* Đặt chiều rộng là 100px */
+        height: 40px; /* Đặt chiều cao là 40px */
+        font-size: 30px; /* Đặt kích thước font chữ */
+        background-color:aqua;
+        border: none; /* Loại bỏ đường viền */
+        cursor: pointer; /* Đổi con trỏ khi hover */
+        border-radius: 40px; /* Bo góc */
+    }
+</style>
+
+<body>
+    <h1>TRƯỜNG ĐẠI HỌC BẠC LIÊU</h1>
+    <h2>KHOA CÔNG NGHỆ THÔNG TIN</h2>
+    <b class="a">Nhập a:</b>
+    <input type="text" class="form-control" name="a" id="a" value="">
+    <br>
+    <b class="a">Nhập b:</b>
+    <input type="text" class="form-control" name="b" id="b">
+    <i class="a">Kết quả:</i>
+    <input type="text" class="form-control" name="ketqua" id="ketqua" readonly>
+    <input type="button" class="btn" value="Tổng" onclick="Tong()">
+    <input type="button" class="btn" value="Hiệu" onclick="Hieu()">
+
+    <script>
+        function Tong() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            var sum = parseFloat(a) + parseFloat(b);                   
+            document.getElementById("ketqua").value = sum;
+            //alert("Tổng a và b là: " + sum);
+        }
+
+        function Hieu(){
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            var sum = parseFloat(a) - parseFloat(b);
+            document.getElementById("ketqua").value = sum;
+        }
+    </script>
+</body>
+</html>

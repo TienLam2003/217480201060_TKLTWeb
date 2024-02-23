@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .text{
+        color: red;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .btn{
+        width: 50px;
+    }
+</style>
+
+<body>
+    <input type="text" name="text" id="text" class="text">
+    <br>
+    <input type="button" class="btn" name="0" id="0" value="0" onclick="ThucThi()">
+    <input type="button" class="btn" name="1" id="1" value="1" onclick="text.value += 1">
+    <input type="button" class="btn" name="2" id="2" value="2" onclick="text.value += 2">
+    <input type="button" class="btn" name="3" id="3" value="3" onclick="text.value += 3">
+    <input type="button" class="btn" name="4" id="4" value="4" onclick="text.value += 4">
+    <br>
+    <input type="button" class="btn" name="5" id="5" value="5" onclick="text.value += 5">
+    <input type="button" class="btn" name="6" id="6" value="6" onclick="text.value += 6">
+    <input type="button" class="btn" name="7" id="7" value="7" onclick="text.value += 7">
+    <input type="button" class="btn" name="8" id="8" value="8" onclick="text.value += 8">
+    <input type="button" class="btn" name="9" id="9" value="9" onclick="text.value += 9">
+    <br>
+    <input type="button" class="btn" name="+" id="+" value="+" onclick="text.value += '+'">
+    <input type="button" class="btn" name="-" id="-" value="-" onclick="text.value += '-'">
+    <input type="button" class="btn" name="*" id="*" value="*" onclick="text.value += '*'">
+    <input type="button" class="btn" name="/" id="/" value="/" onclick="text.value += '/'">
+    <input type="button" class="btn" name="=" id="=" value="=">
+    <br>
+    <input type="button" class="btn" name="C" id="C" value="C" onclick="text.value = ''">
+
+    <script>
+        function ThucThi(){
+            var a = 4;
+            alert(a);
+        }
+    </script>
+
+</body>
+</html>

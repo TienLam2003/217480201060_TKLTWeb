@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hình vuông - Hình lập phương</h1>
+    <div>Nhập độ dài cạnh a:</div>
+    <input type="text" name="nhap" id="nhap">
+    <br>
+    <br>
+    <div>Chọn Hình</div>
+    <hr color="Blue" size="3" >
+    <br>
+    <label><input type="radio" class="rdo" name="hinh" value="hv" checked onclick="DoiTen()"> Hình vuông</label>
+    <label><input type="radio" class="rdo" name="hinh" value="hlp" onclick="DoiTen()"> Hình lập phương</label>
+    <br>
+    <br>
+    <div id="lbl1">Chu vi</div>
+    <input type="text" name="kq1" id="kq1">
+    <div id="lbl2">Diện tích</div>
+    <input type="text" name="kq2" id="kq2">
+    <br>
+    <br>
+    <input type="button" value="Thực hiện" onclick="Check()">
+
+</body>
+<script>
+    function Result(){
+        let elements = document.getElementsByName('hinh');
+        let len = elements.length;
+        let checkValue = '';
+
+        for (let i = 0; i < len; i++){
+            if (elements.item(i).checked){
+                checkValue = elements.item(i).value;
+                alert(checkValue)
+            }
+        }
+    }
+
+    function Check(){
+        let elements = document.getElementsByName('hinh');
+        if(elements.item(0).checked)
+        {
+            var a = document.getElementById('nhap').value;           
+            document.getElementById('kq1').value = a * 4;
+            kq2.value = a * a;
+        }
+        else
+        {
+            var a = document.getElementById('nhap').value;           
+            document.getElementById('kq1').value = "Quên công thức gòi";
+            kq2.value = "Quên công thức hehe";
+        }
+    }
+
+    function DoiTen()
+    {
+        let elements = document.getElementsByName('hinh');
+        if(elements.item(0).checked)
+        {
+            document.getElementById('lbl1').innerText = "Chu vi";
+            document.getElementById('lbl2').innerHTML = "Diện tích";
+        }
+        else  
+        {     
+            document.getElementById('lbl1').innerText = "Diện tích toàn phần";
+            document.getElementById('lbl2').innerHTML = "Thể tích toàn phần";
+        }
+    }
+</script>
+</html>
