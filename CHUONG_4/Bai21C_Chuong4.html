@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="so1" class="txt"> <br><br>
+    <input type="text" id="so2" class="txt"><br><br>
+    <select name="danhsach" id="danhsach">
+            <option value="cong">Cộng</option>
+            <option value="tru">Trừ</option>
+            <option value="nhan">Nhân</option>
+            <option value="chia">Chia</option>
+    </select>
+    
+    <input type="text" id="ketqua" class="txt"><br><br>
+    <input type="button" id="btn" name="btn" value="Tính" onclick="Tinh()">
+</body>
+</html>
+<script>
+    function Tinh()
+    {
+        var kq;
+        var a = document.getElementById("so1").value;
+        var b = document.getElementById("so2").value;
+        var ds = document.getElementById("danhsach").value;
+        if(ds == "cong")
+        {
+            kq = parseFloat(a) + parseFloat(b);
+            document.getElementById("ketqua").value = kq;
+        }
+        if(ds == "tru")
+        {
+            kq = parseFloat(a) - parseFloat(b);
+            document.getElementById("ketqua").value = kq;
+        }
+        if(ds == "nhan")
+        {
+            kq = parseFloat(a) * parseFloat(b);
+            document.getElementById("ketqua").value = kq;
+        }
+        if(ds == "chia")
+        {
+            kq = parseFloat(a) / parseFloat(b);
+            document.getElementById("ketqua").value = kq;
+        }
+    }
+</script>

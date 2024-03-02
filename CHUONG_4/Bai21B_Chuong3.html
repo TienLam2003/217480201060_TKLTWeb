@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            margin: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="so1" class="txt"> <br><br>
+    <input type="text" id="so2" class="txt"><br><br>
+    <input type="radio" id="rdo1" name="rdo" class="rdo" checked>Cộng
+    <input type="radio" id="rdo2" name="rdo" class="rdo">Trừ
+    <input type="radio" id="rdo3" name="rdo" class="rdo">Nhân
+    <input type="radio" id="rdo4" name="rdo" class="rdo">Chia <br><br>
+    <input type="text" id="ketqua" class="txt"><br><br>
+    <input type="button" id="btn" name="btn" value="Tính" onclick="Tinh()">
+</body>
+</html>
+<script>
+    function Tinh()
+    {
+        var kq = 0;
+        var a = document.getElementById("so1").value;
+        var b = document.getElementById("so2").value;
+        var rdo1 = document.getElementById("rdo1");
+        var rdo2 = document.getElementById("rdo2");
+        var rdo3 = document.getElementById("rdo3");
+        var rdo4 = document.getElementById("rdo4");
+        if(rdo1.checked)
+        {
+            kq = parseFloat(a) + parseFloat(b);
+            document.getElementById("ketqua").value = kq;
+        }
+        if(rdo2.checked)
+        {
+            kq = parseFloat(a) - parseFloat(b);
+            document.getElementById("ketqua").value = kq;
+        }
+        if(rdo3.checked)
+        {
+            kq = parseFloat(a) * parseFloat(b);
+            document.getElementById("ketqua").value = kq;
+        }
+        if(rdo4.checked)
+        {
+            kq = parseFloat(a) / parseFloat(b);
+            document.getElementById("ketqua").value = kq;
+        }
+    }
+</script>
