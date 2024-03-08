@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Select id = mau onchange="DoiMau()">
+        <option value="red">Đỏ</option>
+        <option value="blue">Xanh</option>
+        <option value="brown">Nâu</option>
+    </Select>
+</body>
+</html>
+<script>
+    function DoiMau()
+    {
+        document.bgColor = mau.value;
+    }
+</script>

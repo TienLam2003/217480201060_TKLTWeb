@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script language = "JavaScript">
+        var soLuong, a;
+        let x = 1;
+        var ds = new Array(100);
+        soLuong = prompt("Bạn nhập bao nhiêu: ",3);
+        for (i=0; i<soLuong ; i++)
+        {
+            ds[i] = prompt("Nhập vào thiết bị:", "");
+        }
+        //document.write("<tr><th>STT</th><th>Sản phẩm</th></tr>");
+        for(a in ds)
+        {
+            if(ds[a] == "Computer" || ds[a] == "computer")
+            {
+                alert("v");
+                document.write("<tr><td>" + x + "</td><td>" + ds[a] + "</td></tr>");
+            }
+        }
+    </script>
+</body>
+</html>
