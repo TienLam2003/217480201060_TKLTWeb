@@ -4,12 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+.NamVaoLam {
+    padding: 4px 6px;
+    border: 1px solid red;
+    background: aqua;
+}
+</style>
 </head>
 <body>
-    <div>Họ tên</div>
-    <input type="text" name="HoTen" id="HoTen"> 
-    <div>Năm vào làm</div>
-    <input type="text" name="NamVaoLam" id="NamVaoLam">
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-warning">Submit</button>
+      </form>
+
+    <div class="form-group">
+        <label for="HoTen">Họ tên</label>
+        <input type="text" name="HoTen" id="ho-ten"> 
+    </div>
+
+    <label for="">Năm vào làm</div>
+    <input type="text" name="NamVaoLam" id="NamVaoLam" class="NamVaoLam">
     <div>Hệ số</div>
     <input type="text" name="HeSo" id="HeSo">
     <div>Lương cơ sở</div>
@@ -22,18 +50,35 @@
     <input type="text" name="ThamNien" id="ThamNien">
     <div>Thành tiền</div>
     <input type="text" name="ThanhTien" id="ThanhTien">
+
+    <label for="year">Năm</label>
+    <select name="" id="year" class="form-control">
+    </select>
     <br>
     <br>
     <input type="button" class="btn" value="Tính toán" onclick="TinhLuong()">
 
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     <script>
         function TinhLuong(){
+            var a = 1;
+            var b = 2;
             LuongCoBan.value = HeSo.value * LuongCoSo.value;
             PhuCap.value = 25/100 * LuongCoBan.value;
             var nam = new Date();
             var namHienTai = nam.getFullYear();
             ThamNien.value = namHienTai - NamVaoLam.value
             ThanhTien.value = LuongCoBan.value + PhuCap.value
+        }
+        LoadYear();
+        function LoadYear(){
+            var nam = new Date();
+            var namHienTai = nam.getFullYear();
+            var html = "";
+            for(let i = 1999; i <= namHienTai; i++){
+                html += `<option value="">${i}</option>`;
+            }
+            $("#year").append(html);
         }
     </script>
 

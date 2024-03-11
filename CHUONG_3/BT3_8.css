@@ -1,0 +1,98 @@
+.menu {
+    background-color: gray;
+    padding: 0;
+}
+.menu .menuphu{
+    list-style-type: none;
+}
+
+.menu > li {
+    display: inline-block;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu>li>a{
+    color: white ;
+    text-transform: uppercase;
+}
+
+.menu li a{
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+
+.menu li:hover .menuphu {
+    display: block;
+}
+
+.menu > li:hover > a {
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu .menuphu {
+    display: none;
+    min-width: 180px;
+    background-color: gray;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 0;
+
+}
+
+.menuphu > li{
+    display: block;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.menuphu li:hover{
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.menuphu li:hover .menuphuphu {
+    display: block;
+    border: 1px solid black;
+    padding: 0;
+    left: 100%;
+    color: white;
+    
+}
+
+.menuphu > li:hover > a {
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    
+}
+
+.menuphuphu{
+    display: none;
+    position: absolute;
+    width: 200px;
+    left: 100%;
+    top: -1px;
+    background-color: grey;
+    padding: 0;
+}
+
+.menuphuphu > li{
+    padding: 10px;
+    display: block;
+    border: 1px solid black;
+}
+
+.menuphuphu li:hover{
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
