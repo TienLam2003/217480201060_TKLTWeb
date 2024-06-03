@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.css">
+</head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .infomation {
+            width: 300px;
+        }
+    </style>
+<body>
+    <nav class="navbar navbar-light justify-content-center fs-3 mb-5 bg-info">
+        
+    </nav>
+
+    <div class="container">
+        <div class="text-center text-primary mb-4">
+            <h3>Thêm sinh viên</h3>
+            <p class="text-muted"></p>
+        </div>
+
+        <div class="container d-flex justify-content-center">
+            <form action="add_new.php" method="post">
+                <div>
+                    <div class="infomation">
+                        <label for="maSinhVien" class="form-label">Mã sinh viên</label>
+                        <input type="text" name="maSinhVien" class="form-control" placeholder="Mã sinh viên">
+                    </div>
+                    <div class="infomation">
+                        <label for="tenSinhVien" class="form-label">Tên sinh viên</label>
+                        <input type="text" name="tenSinhVien" class="form-control" placeholder="Tên sinh viên">
+                    </div>
+                    <div class="infomation">
+                        <label for="ngaySinh" class="form-label">Ngày sinh</label>
+                        <input type="date" name="ngaySinh" class="form-control" placeholder="Ngày sinh">
+                    </div>
+                    <div class="infomation">
+                        <label for="loaiTaiKhoan" class="form-label">Loại tài khoản</label>
+                        <select name="loaiTaiKhoan" id="loaiTaiKhoan" class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                    <div class="infomation">
+                        <label for="nganhHoc" class="form-label">Ngành học</label>
+                        <input type="text" name="nganhHoc" class="form-control" placeholder="Ngành học">
+                    </div>
+                    <div class="form-group mb-3 infomation">
+                        <label for="gioiTinh">Giới tính:</label> &nbsp;
+                        <input type="radio" class="form-check-input" name="gioiTinh" id="Nam" value="Nam">
+                        <label for="gioiTinh" class="form-label">Nam</label>
+                        &nbsp;
+                        <input type="radio" class="form-check-input" name="gioiTinh" id="Nam" value="Nữ">
+                        <label for="gioiTinh" class="form-label">Nữ</label>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary" name="insert"> Lưu </button>
+                    <a href="index.php" class="btn btn-danger"> Trở về </a>
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="../bootstrap-5.3.3-dist/js/bootstrap.js"></script>    
+</body>
+</html>

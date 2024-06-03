@@ -21,6 +21,8 @@
     <input type="radio" id="rdo4" name="rdo" class="rdo">Chia <br><br>
     <input type="text" id="ketqua" class="txt"><br><br>
     <input type="button" id="btn" name="btn" value="Tính" onclick="Tinh()">
+    <input type="checkbox" name="a" id="a1">hehe
+    <input type="checkbox" name="a" id="a2">hihi
 </body>
 </html>
 <script>
@@ -33,6 +35,7 @@
         var rdo2 = document.getElementById("rdo2");
         var rdo3 = document.getElementById("rdo3");
         var rdo4 = document.getElementById("rdo4");
+        var check = document.getElementById("a1");
         if(rdo1.checked)
         {
             kq = parseFloat(a) + parseFloat(b);
@@ -52,6 +55,10 @@
         {
             kq = parseFloat(a) / parseFloat(b);
             document.getElementById("ketqua").value = kq;
+        }
+        if (check.checked)
+        {
+            alert("hehe")
         }
     }
 </script>

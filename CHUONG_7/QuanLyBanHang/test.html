@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu và Bảng</title>
+<style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.top-menu {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  margin-top: 30px;
+}
+
+.top-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.top-menu ul li {
+  display: inline;
+}
+
+.top-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.side-menu {
+  float: left;
+  width: 200px;
+  background-color: #f4f4f4;
+}
+
+.side-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-menu ul li {
+  padding: 10px;
+}
+
+.side-menu ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.content {
+  margin-left: 220px; /* Tổng kích thước của side-menu và padding của content */
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+</style>
+</head>
+<body>
+  <div class="top-menu">
+    <ul>
+      <li><a href="#">Trang chủ</a></li>
+      <li><a href="#">Sản phẩm</a></li>
+      <li><a href="#">Dịch vụ</a></li>
+      <li><a href="#">Liên hệ</a></li>
+    </ul>
+  </div>
+
+  <div class="side-menu">
+    <ul>
+      <li><a href="#">Mục 1</a></li>
+      <li><a href="#">Mục 2</a></li>
+      <li><a href="#">Mục 3</a></li>
+      <li><a href="#">Mục 4</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <table>
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+          <th>Header 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+        </tr>
+        <tr>
+          <td>Data 4</td>
+          <td>Data 5</td>
+          <td>Data 6</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
